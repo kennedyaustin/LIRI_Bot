@@ -12,6 +12,7 @@ const fs = require('fs');
 var action = process.argv[2];
 // This is the search term the user will use
 var searchTermRaw = process.argv.splice(3);
+// This will join the search term above with plus signs for the urls
 var searchTerm = searchTermRaw.join('+')
 
 var choosewhatToDo= function(action, searchTerm) {
@@ -33,6 +34,7 @@ var choosewhatToDo= function(action, searchTerm) {
             break
 
         default:
+            // If no input is typed into the node terminal, then this will run instead of throwing an error
             case 'spotify-this-song':
                 findSongs(searchTerm)
                 break
@@ -54,6 +56,8 @@ function findSongs(songName) {
   
     spotify.search({type: 'track', query: songName}).then(function(data){
 
+        // This variable makes it so that I don't have to type the same long string of characters in for each piece of data I'm pulling
+        // from the api
         var results= data.tracks.items[0]
         console.log('Song name: ' + results.name)
         console.log('Album this Song is From: ' + results.album.name)
@@ -69,6 +73,7 @@ function findSongs(songName) {
 
 function findMovies(movieName) {
 
+    // If no movie name is typed, this will appear
     if (!movieName) {
         movieName = 'Mr. Nobody';
         console.log('If you haven\'t watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/')
@@ -77,6 +82,7 @@ function findMovies(movieName) {
     axios.get('http://www.omdbapi.com/?apikey=5d16cf37&t=' + movieName)
         .then(function(data) {
             var results= data.data
+            // The \n creates a new line for each of the following pieces of information
             console.log("Title: " + results.Title +
                         '\nYear of Release: ' + results.Year +
                         '\nRating: ' + results.Rated + 
