@@ -102,11 +102,13 @@ function findConcerts(artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function(data) {
         var results= data.data[0]
+        // creating a date that I can use inside of the moment node in order to format it to look more aesthetically pleasing
         var date= results.datetime
         var dateofConcert= moment(date).format('MM/DD/YYYY')
         console.log('Name of the Venue: ' + results.venue.name + 
                     '\nVenue Location: ' + results.venue.location +
                     '\nDate of the Concert: ' + dateofConcert)
+                    // Could've used results.datetime to show the date of the concert, but its format would look weird for the user
     })
 
 }
