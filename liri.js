@@ -1,5 +1,7 @@
 require('dotenv').config();
+// This is pulls the keys for the Spotify API from the key.js file
 const keys = require('./keys.js');
+// This allows us to use the node api, otherwise an error will pop up
 const Spotify = require('node-spotify-api');
 const spotify = new Spotify(keys.spotify);
 const axios = require('axios').default;
