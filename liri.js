@@ -41,9 +41,6 @@ var choosewhatToDo= function(action, searchTerm) {
     }
 }
 
-// This will run the function above 
-choosewhatToDo(action, searchTerm)
-
 // ------------------ Spotify Function ----------------------
 
 function findSongs(songName) {
@@ -117,14 +114,21 @@ function findConcerts(artist) {
 
 function itDo() {
 
+    // Read the file, file name, convert it to be easily readable, then function
     fs.readFile('random.txt', 'utf8', function(err,data) {
         if (err) {
             console.log(err)
         }
 
-        var randomArr= data.split(',')
-        var action= randomArr[0]
-        var input= randomArr[1]
+        // Splits the text that's in the random.txt file by commas
+        var randomText= data.split(',')
+        // This takes the first part of the array and stores it in a variable for use in the function below
+        var action= randomText[0]
+        // This takes the 2nd part of the array as the user input
+        var input= randomText[1]
         choosewhatToDo(action,input)
     })
 }
+
+// This will run the function above 
+choosewhatToDo(action, searchTerm)
