@@ -31,8 +31,9 @@ and hit enter to run the javascript file.
 2) concert-this <br>
 3) spotify-this-song <br>
 4) do-what-it-says <br>
-These commands plus your search term will return data from one of the APIs included in the list above.
+These commands plus your search term will return data from one of the APIs included in the list above. The fourth command 'do-what-it-says' does not need another input because it will read the information from the random.txt file and put it into the spotify-this-song command for you.
+![](SunshineD8_SS/InvalidEmail.png)
 
-
-
-
+# Examples
+When the concert-this command is run an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see. <br>
+![]LIRI_SS/ConcertWorking <br>
