@@ -31,7 +31,8 @@ and hit enter to run the javascript file.
 1) movie-this <br>
 2) concert-this <br>
 3) spotify-this-song <br>
-4) do-what-it-says <br>
+4) do-what-it-says <br><br>
+
 These commands plus your search term will return data from one of the APIs included in the list above. The fourth command 'do-what-it-says' does not need another input because it will read the information from the random.txt file and put it into the spotify-this-song command for you.
 
 # movie-this
@@ -53,5 +54,3 @@ When this command is run without a song name put in, the song 'The Sign' will be
 # do-what-it-says
 When this special command is run, there is no other input required. This is because this command will read the random.txt file in the folder and user that folder as input for the spotify-this-song command. <br>
 ![](LIRI_SS/DoWhatSays.png)
-
-
