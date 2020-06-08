@@ -33,6 +33,13 @@ and hit enter to run the javascript file.
 4) do-what-it-says <br>
 These commands plus your search term will return data from one of the APIs included in the list above. The fourth command 'do-what-it-says' does not need another input because it will read the information from the random.txt file and put it into the spotify-this-song command for you.
 
-# Examples
-When the concert-this command is run an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see. <br>
-![](LIRI_SS/ConcertWorking.png) <br>
+# movie-this
+When the movie-this command is run with an movie title being typed in by the user, the title, year of release, rating, rotten tomato score, country of production, languages, plot, and actors of the movie typed in will be shown to the user. <br>
+![](LIRI_SS/MovieWorking.png) <br>
+While, if the same command is run without a movie title being input, the same information will be provided, but for a new movie "Mr. Nobody" with a link to where it can be watched. <br>
+![](LIRI_SS/MovieNoTitle.png)
+
+# concert-this
+When the concert-this command is run with an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see. <br>
+![](LIRI_SS/ConcertWorking.png)
+
