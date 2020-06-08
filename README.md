@@ -34,12 +34,23 @@ and hit enter to run the javascript file.
 These commands plus your search term will return data from one of the APIs included in the list above. The fourth command 'do-what-it-says' does not need another input because it will read the information from the random.txt file and put it into the spotify-this-song command for you.
 
 # movie-this
-When the movie-this command is run with an movie title being typed in by the user, the title, year of release, rating, rotten tomato score, country of production, languages, plot, and actors of the movie typed in will be shown to the user. <br>
+When the movie-this command is run with an movie title being typed in by the user, the title, year of release, rating, rotten tomato score, country of production, languages, plot, and actors of the movie typed in will be shown to the user through the OMDB API. <br>
 ![](LIRI_SS/MovieWorking.png) <br>
 While, if the same command is run without a movie title being input, the same information will be provided, but for a new movie "Mr. Nobody" with a link to where it can be watched. <br>
 ![](LIRI_SS/MovieNoTitle.png)
 
 # concert-this
-When the concert-this command is run with an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see. <br>
+When the concert-this command is run with an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see through the Bands in Town API. <br>
 ![](LIRI_SS/ConcertWorking.png)
+
+# spotifiy-this-song
+When the spotify-this-song command is run, the song name, album the song if from, artist, and a link to a preview of the song typed in will be displayed to the user through the Spotify API. <br>
+![](LIRI_SS/SpotifyWorking.png) <br>
+When this command is run without a song name put in, the song 'The Sign' will be shown to the user instead. <br>
+![](LIRI_SS/SpotifyNoSong.png)
+
+# do-what-it-says
+When this special command is run, there is no other input required. This is because this command will read the random.txt file in the folder and user that folder as input for the spotify-this-song command. <br>
+![](LIRI_SS/DoWhatSays.png)
+
 
