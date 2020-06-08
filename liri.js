@@ -27,6 +27,7 @@ var choosewhatToDo= function(action, searchTerm) {
             break
 
         case 'do-what-it-says':
+            itDo()
             break
 
         default:
@@ -100,4 +101,20 @@ function findConcerts(artist) {
                     '\nDate of the Concert: ' + dateofConcert)
     })
 
+}
+
+// --------------------------- Do What It Says --------------------------------
+
+function itDo() {
+
+    fs.readFile('random.txt', 'utf8', function(err,data) {
+        if (err) {
+            console.log(err)
+        }
+
+        var randomArr= data.split(',')
+        var action= randomArr[0]
+        var input= randomArr[1]
+        choosewhatToDo(action,input)
+    })
 }
