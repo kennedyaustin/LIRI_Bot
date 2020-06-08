@@ -35,4 +35,4 @@ These commands plus your search term will return data from one of the APIs inclu
 
 # Examples
 When the concert-this command is run an artists name, the name of the venue, venue location, and date of the venue will all be displayed for the user to see. <br>
-![]LIRI_SS/ConcertWorking.png <br>
+![](LIRI_SS/ConcertWorking.png) <br>
