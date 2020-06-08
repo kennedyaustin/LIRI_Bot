@@ -19,6 +19,7 @@ var choosewhatToDo= function(action, searchTerm) {
             break
 
         case 'concert-this':
+            findConcerts(searchTerm)
             break
         
         case 'spotify-this-song':
@@ -37,6 +38,7 @@ var choosewhatToDo= function(action, searchTerm) {
 
 // This will run the function above 
 choosewhatToDo(action, searchTerm)
+
 // ------------------ Spotify Function ----------------------
 
 function findSongs(songName) {
@@ -60,6 +62,8 @@ function findSongs(songName) {
     })
 };
 
+// --------------------- OMDB Function -------------------------------
+
 function findMovies(movieName) {
 
     if (!movieName) {
@@ -82,3 +86,18 @@ function findMovies(movieName) {
 
 }
 
+// ------------------------ Bands in Town Function --------------------------
+
+function findConcerts(artist) {
+
+    axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
+    .then(function(data) {
+        var results= data.data[0]
+        var date= results.datetime
+        var dateofConcert= moment(date).format('MM/DD/YYYY')
+        console.log('Name of the Venue: ' + results.venue.name + 
+                    '\nVenue Location: ' + results.venue.location +
+                    '\nDate of the Concert: ' + dateofConcert)
+    })
+
+}
